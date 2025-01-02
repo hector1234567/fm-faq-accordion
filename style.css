@@ -1,0 +1,115 @@
+@font-face {
+  font-family: Work Sans;
+  src: url("/assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Pink: hsl(281, 83%, 54%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Work Sans;
+  font-size: 1.6rem;
+  color: var(--Dark-purple);
+  position: relative;
+  background-color: var(--Light-pink);
+  background-image: url("/assets/images/background-pattern-desktop.svg");
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 100dvh;
+}
+
+.faqs {
+  width: 60rem;
+  padding: 4rem;
+  background-color: var(--White);
+  border-radius: 1.6rem;
+  box-shadow: 0 3.2rem 5.6rem 0 hsla(292, 42%, 14%, 0.1);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.faqs__title {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.faqs__title img {
+  width: 3.5rem;
+}
+
+.faqs__title h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+}
+
+.faqs__accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.faqs__accordion input {
+  display: none;
+}
+
+.faqs__accordion label {
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faqs__accordion label:hover {
+  color: var(--Pink);
+}
+
+.faqs__accordion label::after {
+  content: url("/assets/images/icon-plus.svg");
+  width: 2.438rem;
+}
+
+.faqs__accordion input:checked + label::after {
+  content: url("/assets/images/icon-minus.svg");
+  width: 2.438rem;
+}
+
+.faqs__accordion p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--Grayish-purple);
+}
+
+.faqs__accordion input:not(:checked) + label + p {
+  display: none;
+}
+
+.faqs__accordion br {
+  content: "";
+  display: block;
+  height: 0.1rem;
+  background-color: var(--Light-pink);
+}
