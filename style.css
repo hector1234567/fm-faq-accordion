@@ -113,3 +113,17 @@ body {
   height: 0.1rem;
   background-color: var(--Light-pink);
 }
+
+@media screen and (max-width: 648px) {
+  html {
+    font-size: 50%;
+  }
+
+  .faqs {
+    width: calc(100% - 48px);
+  }
+
+  .faqs__title h1 {
+    font-size: 4rem;
+  }
+}
