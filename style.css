@@ -66,7 +66,7 @@ body {
 .faqs__accordion {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.4rem;
 }
 
 .faqs__accordion input {
@@ -105,6 +105,10 @@ body {
 
 .faqs__accordion input:not(:checked) + label + p {
   display: none;
+}
+
+.faqs__accordion input:checked + label + p + br {
+  height: 0;
 }
 
 .faqs__accordion br {
